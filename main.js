@@ -52,11 +52,6 @@ client.on('message', message => {
         message.channel.send("Commands:\n**Help** = List of all the commands.\n**... ping ...** = Pong.\n**Spam \"Word/Sentence\"** = Spams that word or sentence.\n**Say \"Word/Sentence\"** = Says that word or sentence.\n**... name ...** = Generates a random name.\n**Anything else** = Yes or No awnser.");
     }
 
-    else if (args.includes("ping")) {
-        message.channel.send('pong!');
-
-    }
-
     else if (args[0] == "spam") {
         var fruits = args2;
         fruits.shift();
@@ -139,6 +134,10 @@ client.on('message', message => {
 
         var rand_name = rand_adj + rand_noun;
         message.channel.send(rand_name);
+    }
+    else if (args.includes("ping")) {
+        message.channel.send('Pong!');
+
     }
 
 
