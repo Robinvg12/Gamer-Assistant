@@ -80,7 +80,9 @@ client.on('message', message => {
         if (fruits.length < 1) {
             fruits = ["Spam"];
         }
+        
         var last = fruits[fruits.length - 1].replace(/[^0-9@]/g, '');
+        if (last)
 
         if (last.charAt(0) == "@") {
             last = last.substring(1);
@@ -93,8 +95,12 @@ client.on('message', message => {
             var high_last = false;
         }
 
-        if (high_last && last < 31) {
+        if (high_last && last < 31 && last > 10) {
             var spam_len = last;
+            if (fruits.includes("<@") && fruits.includes(">")) {
+                message.channel.send("You cant spam a mention more than 10 times");
+                return;
+            }
             fruits.pop();
         } else if (high_last && last > 30) {
             message.channel.send("Max max spam is 30");
