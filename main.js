@@ -3,8 +3,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 const prefix = 'hey gamer';
+
 client.once('ready', () => {
-    console.log('Gamer Assistant is online!')
+    console.log('Gamer Assistant is online!');
     
 });
 
@@ -21,6 +22,11 @@ const is_list = ["is", "was", "am", "are", "were", "did", "does", "has", "have",
 
 
 client.on('message', message => {
+    client.once('ready', () => {
+        message.channel.send("Gamer Assistant is online!");
+
+    });
+
     var str = message.content;
     var res = str.toLowerCase().replace(/[^A-Za-z0-9\s<>@:]/g, '');
 
