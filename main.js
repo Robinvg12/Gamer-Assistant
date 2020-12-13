@@ -51,10 +51,25 @@ client.on('message', message => {
     //var spam = args.includes("spam");
     //var is = args.some(r => is_list.indexOf(r) >= 0);
     else if (args == "help") {
-        message.channel.send("Commands:\n**Help** = List of all the commands.\n**... ping ...** = Pong.\n**Spam \"Word/Sentence\"** = Spams that word or sentence.\n**Say \"Word/Sentence\"** = Says that word or sentence.\n**... name ...** = Generates a random name.\n**Anything else** = Yes or No awnser.");
+        message.channel.send("Commands:\n**Help** = List of all the commands.\n**... ping ...** = Pong.\n**Spam \"Word/Sentence\"** = Spams that word or sentence.\n**Say \"Word/Sentence\"** = Says that word or sentence.\nBroadcast \"Word/Sentence\"** = Says that word or sentence and deletes your message.\n**... name ...** = Generates a random name.\n**Anything else** = Yes or No awnser.");
     }
     else if (args[0] == "help" && args[1] == "nl") {
-        message.channel.send("Commands:\n**Help** = Lijst met alle commando's.\n**... ping ...** = Pong.\n**Spam \"Woord/Zin\"** = Spamt dat woord of die zin.\n**Zeg \"Woord/Zin\"** = Zeg dat woord of die zin.\n**... naam ...** = Genereert een willekeurige naam.\n**Al het andere** = Engelse Ja of Nee antwoord.");
+        message.channel.send("Commands:\n**Help** = Lijst met alle commando's.\n**... ping ...** = Pong.\n**Spam \"Woord/Zin\"** = Spamt dat woord of die zin.\n**Zeg \"Woord/Zin\"** = Zeg dat woord of die zin.\nBroadcast \"Woord/Zin\"** = Zeg dat woord of die zin en verwijderd jouw bericht.\n**... naam ...** = Genereert een willekeurige naam.\n**Al het andere** = Engelse Ja of Nee antwoord.");
+    }
+    else if (args[0] == "broadcast") {
+        var fruits = args2;
+        fruits.shift();
+        fruits.shift();
+        fruits.shift();
+
+        message.delete({ timeout: 1 });
+
+        if (fruits.length < 1) {
+            message.channel.send('Type a string after "say"');
+        } else {
+
+            message.channel.send(fruits.join(" "));
+        }
     }
 
     else if (args[0] == "spam") {
