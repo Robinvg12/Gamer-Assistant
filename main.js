@@ -54,7 +54,7 @@ client.on('message', message => {
         message.channel.send("Commands:\n**Help** = List of all the commands.\n**... ping ...** = Pong.\n**Spam \"Word/Sentence\"** = Spams that word or sentence.\n**Say \"Word/Sentence\"** = Says that word or sentence.\n**Broadcast \"Word/Sentence\"** = Says that word or sentence and deletes your message.\n**... name ...** = Generates a random name.\n**Anything else** = Yes or No awnser.");
     }
     else if (args[0] == "help" && args[1] == "nl") {
-        message.channel.send("Commands:\n**Help** = Lijst met alle commando's.\n**... ping ...** = Pong.\n**Spam \"Woord/Zin\"** = Spamt dat woord of die zin.\n**Zeg \"Woord/Zin\"** = Zeg dat woord of die zin.\n**Broadcast \"Woord/Zin\"** = Zeg dat woord of die zin en verwijderd jouw bericht.\n**... naam ...** = Genereert een willekeurige naam.\n**Al het andere** = Engelse Ja of Nee antwoord.");
+        message.channel.send("Commands:\n**Help** = Lijst met alle commando's.\n**... ping ...** = Pong.\n**Spam \"Woord/Zin\"** = Spamt dat woord of die zin.\n**Zeg \"Woord/Zin\"** = Zegt dat woord of die zin.\n**Broadcast \"Woord/Zin\"** = Zegt dat woord of die zin en verwijderd jouw bericht.\n**... naam ...** = Genereert een willekeurige naam.\n**Al het andere** = Engelse Ja of Nee antwoord.");
     }
     else if (args[0] == "broadcast") {
         var fruits = args2;
