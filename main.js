@@ -173,7 +173,7 @@ client.on('message', message => {
     else if (args[0] = "ping") {
         message.channel.send('Pong!');
 
-    }
+    } 
     else {
         var rand_word = yesno_list[Math.floor(Math.random() * yesno_list.length)];
         message.channel.send(rand_word);
