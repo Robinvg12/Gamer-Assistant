@@ -80,20 +80,28 @@ client.on('message', message => {
         if (fruits.length < 1) {
             fruits = ["Spam"];
         }
-        
-        var last = fruits[fruits.length - 1].replace(/[^0-9@]/g, '');
-        if (last)
-
-        if (last.charAt(0) == "@") {
-            last = last.substring(1);
-            var high_last = true;
-        } else if (last.includes("@")) {
-            message.channel.send("Number is invalid");
-            return;
+        if (!fruits[fruits.length - 1].includes("<@")) {
+            var number = true
         } else {
-            last = Number(last);
+            var number = false
+        }
+        var last = fruits[fruits.length - 1].replace(/[^0-9@]/g, '');
+        
+        if (number) {
+            if (last.charAt(0) == "@") {
+                last = last.substring(1);
+                var high_last = true;
+            } else if (last.includes("@")) {
+                message.channel.send("Number is invalid");
+                return;
+            } else {
+                last = Number(last);
+                var high_last = false;
+            }
+        } else {
             var high_last = false;
         }
+        
 
         if (high_last && last < 31 && last > 10) {
             var spam_len = last;
