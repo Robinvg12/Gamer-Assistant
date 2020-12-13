@@ -53,7 +53,7 @@ client.on('message', message => {
     else if (args == "help") {
         message.channel.send("Commands:\n**Help** = List of all the commands.\n**... ping ...** = Pong.\n**Spam \"Word/Sentence\"** = Spams that word or sentence.\n**Say \"Word/Sentence\"** = Says that word or sentence.\n**... name ...** = Generates a random name.\n**Anything else** = Yes or No awnser.");
     }
-    else if (args == "help nl") {
+    else if (args[0] == "help" && args[1] == "nl") {
         message.channel.send("Commands:\n**Help** = Lijst met alle commando's.\n**... ping ...** = Pong.\n**Spam \"Woord/Zin\"** = Spamt dat woord of die zin.\n**Zeg \"Woord/Zin\"** = Zeg dat woord of die zin.\n**... naam ...** = Genereert een willekeurige naam.\n**Al het andere** = Engelse Ja of Nee antwoord.");
     }
 
