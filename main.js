@@ -22,10 +22,6 @@ const is_list = ["is", "was", "am", "are", "were", "did", "does", "has", "have",
 
 
 client.on('message', message => {
-    client.once('ready', () => {
-        message.channel.send("Gamer Assistant is online!");
-
-    });
 
     var str = message.content;
     var res = str.toLowerCase().replace(/[^A-Za-z0-9\s<>@:]/g, '');
@@ -138,7 +134,7 @@ client.on('message', message => {
         rand_adj = rand_adj.charAt(0).toUpperCase() + rand_adj.slice(1);
         rand_noun = rand_noun.charAt(0).toUpperCase() + rand_noun.slice(1);
 
-        var rand_name = rand_adj + rand_noun;
+        var rand_name = rand_adj + " " + rand_noun;
         message.channel.send(rand_name);
     }
     else if (args.includes("ping")) {
