@@ -53,6 +53,9 @@ client.on('message', message => {
     else if (args == "help") {
         message.channel.send("Commands:\n**Help** = List of all the commands.\n**... ping ...** = Pong.\n**Spam \"Word/Sentence\"** = Spams that word or sentence.\n**Say \"Word/Sentence\"** = Says that word or sentence.\n**... name ...** = Generates a random name.\n**Anything else** = Yes or No awnser.");
     }
+    else if (args == "help nl") {
+        message.channel.send("Commands:\n**Help** = Lijst met alle commando's.\n**... ping ...** = Pong.\n**Spam \"Woord/Zin\"** = Spamt dat woord of die zin.\n**Zeg \"Woord/Zin\"** = Zeg dat woord of die zin.\n**... naam ...** = Genereert een willekeurige naam.\n**Al het andere** = Engelse Ja of Nee antwoord.");
+    }
 
     else if (args[0] == "spam") {
         var fruits = args2;
@@ -104,7 +107,7 @@ client.on('message', message => {
 
     }
 
-    else if (args[0] == "say") {
+    else if (args[0] == "say" || args[0] == "zeg") {
         var fruits = args2;
         fruits.shift();
         fruits.shift();
@@ -118,7 +121,7 @@ client.on('message', message => {
 
 
     }
-    else if (args.includes("name")) {
+    else if (args.includes("name") || args.includes("naam")) {
         var fs = require("fs");
         var text = fs.readFileSync("./adjectives.txt", "utf-8");
         var textByLine = text.split("\n");
