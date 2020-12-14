@@ -4,6 +4,8 @@ const client = new Discord.Client();
 
 const prefix = 'hey gamer';
 
+car selfreact = false;
+
 client.once('ready', () => {
     console.log('Gamer Assistant is online!');
     
@@ -26,8 +28,12 @@ client.on('message', message => {
     var str = message.content;
     var res = str.toLowerCase().replace(/[^A-Za-z0-9\s<>@:]/g, '');
 
-
-    if (!res.startsWith(prefix) || message.author.bot ) return;
+    if (!selfreact) {
+        if (!res.startsWith(prefix) || message.author.bot) return;
+    } else {
+        if (!res.startsWith(prefix)) return;
+    }
+    
     //message.channel.send('mc: ' + message.content);
     //message.channel.send('res: ' + res);
 
@@ -76,6 +82,22 @@ client.on('message', message => {
     }
     else if (args[0] == "help" && args[1] == "dobbelsteen") {
         message.channel.send("**Hey Gamer, dobbelsteen (1 - 6)\n**of **Hey Gamer, dobbelsteen 'nummer' (1 - nummer)\n**of **Hey Gamer, dobbelsteen 'minimum' 'maximum' (min. - max.)**");
+    }
+    else if (args[0] == "selfreact") {
+        if (message.member.roles.find(r => r.name === "Admin") {
+            message.delete({ timeout: 1 });
+            selfreact = true;
+        } else {
+            return;
+        }
+    }
+    else if (args[0] == "noselfreact") {
+        if (message.member.roles.find(r => r.name === "Admin") {
+            message.delete({ timeout: 1 });
+            selfreact = false;
+        } else {
+            return;
+        }
     }
 
     else if (args[0] == "broadcast") {
