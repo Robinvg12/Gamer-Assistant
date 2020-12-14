@@ -180,9 +180,9 @@ client.on('message', message => {
     }
     else if (args[0] == "dice" || args[0] == "dobbelsteen" || args[0] == "roll") {
         args[0] = "1"
-        args_str = args.join(" ");
-        args_str = args_str.replace(/[^0-9]/g, '')
-        args = args_str.split(" ");
+        args_str = args.join(",");
+        args_str = args_str.replace(/[^0-9,]/g, '')
+        args = args_str.split(",");
         message.channel.send("Rolling...")
         //message.channel.send("args.length " + args.length)
         //message.channel.send("args[0] " + args[0])
