@@ -32,8 +32,8 @@ const helpEmbed = new Discord.MessageEmbed()
         { name: 'Spam', value: "Hey Gamer, spam 'Word / Sentence' 'amount(*optional)' = Spams that word or sentence." },
         { name: 'Say', value: "Hey Gamer, say 'Word/Sentence' = Says that word or sentence." },
         { name: 'Broadcast', value: "Hey Gamer, broadcast 'Word/Sentence' = Says that word or sentence and deletes your message." },
-        { name: 'Age', value: "Hey Gamer, ... name ... = Says that word or sentence and deletes your message." },
-        { name: 'Name', value: "Hey Gamer, ... old / age ... = Generates random age." },
+        { name: 'Name', value: "Hey Gamer, ... name ... = Says that word or sentence and deletes your message." },
+        { name: 'Age', value: "Hey Gamer, ... old / age ... = Generates random age." },
         { name: 'Dice', value: "Hey Gamer, dice/roll = Rolls dice (number between 1 and 6).\nor\nHey Gamer, dice/roll 'number' = Rolls dice (number between 1 and your number).\nor\nHey Gamer, dice/roll 'minimum' 'maximum' = Rolls dice (number between min. and max.)." },
         { name: 'Anything else', value: "Random Yes or No based awnser." },
     )
