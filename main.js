@@ -180,7 +180,7 @@ client.on('message', message => {
     }
     else if (args[0] == "dice" || args[0] == "dobbelsteen" || args[0] == "roll") {
         args[0] = "1"
-        var args = args.replace(/[^0-9]/g, '')
+        args = args.replace(/[^0-9]/g, '')
         message.channel.send("Rolling...")
         //message.channel.send("args.length " + args.length)
         //message.channel.send("args[0] " + args[0])
