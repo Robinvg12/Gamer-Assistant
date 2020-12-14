@@ -21,12 +21,23 @@ const yesno_list = ["Yes",       "No",               "Maybe...",
 
 const is_list = ["is", "was", "am", "are", "were", "did", "does", "has", "have", "had"]
 
-const helpEmbed = new Discord.MessageEmbed()
+const exampleEmbed = new Discord.MessageEmbed()
     .setColor('#0099ff')
-    .setTitle('Commands:')
-    .setAuthor('Gamer Assistant', 'http://prnt.sc/w2ii62')
-    .setDescription("Commands:\n**Help** = List of all the commands.\n**Help 'command'** = View command.\n**... ping ...** = Pong.\n**Spam 'Word/Sentence'** = Spams that word or sentence.\n**Say 'Word/Sentence'** = Says that word or sentence.\n**Broadcast 'Word/Sentence'** = Says that word or sentence and deletes your message.\n**... name ...** = Generates a random name.\n**... old/age ...** = Generates random age.\n**Dice/Roll 'number'** = Rolls dice for a number between 1 and that number.\nor **Dice/Roll 'min number' 'max number'** = Rolls dice for a number between the min. and max.\n**Anything else** = Yes or No awnser.")
-    .setThumbnail('http://prnt.sc/w2ii62')
+    .setTitle('Some title')
+    .setAuthor('Some name', /*'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org'*/)
+    .setDescription('Some description here')
+    //.setThumbnail('https://i.imgur.com/wSTFkRM.png')
+    .addFields(
+{ name: 'Help', value: "Hey Gamer, help = List of all the commands.\nHey Gamer, help 'command' = View command." },
+{ name: 'Ping', value: "Hey Gamer, ... ping ... = Pong." }, 
+{ name: 'Spam', value: "Hey Gamer, spam 'Word / Sentence' 'amount(*optional)' = Spams that word or sentence." },
+{ name: 'Say', value: "Hey Gamer, say 'Word/Sentence' = Says that word or sentence." },
+{ name: 'Broadcast', value: "Hey Gamer, broadcast 'Word/Sentence' = Says that word or sentence and deletes your message." },
+{ name: 'Age', value: "Hey Gamer, ... name ... = Says that word or sentence and deletes your message." },
+{ name: 'Name', value: "Hey Gamer, ... old / age ... = Generates random age." },
+{ name: 'Dice', value: "Hey Gamer, dice/roll (1 - 6) \nor\nHey Gamer, dice/roll 'number'(1 - number) \nor\nHey Gamer, dice/roll 'minimum' 'maximum'(min. - max.)" },
+{ name: 'Anything else', value: "Random Yes or No based awnser." },
+    )
     .setTimestamp()
     .setFooter('Gamer Assistant');
 
@@ -63,7 +74,7 @@ client.on('message', message => {
 
     }
     else if (args[0] == "help" && args[1] == "spam") {
-        message.channel.send("**Hey Gamer, spam 'Sentence' 'amount'**");
+        message.channel.send("**Hey Gamer, spam 'Sentence' 'amount(*optional)'**");
     }
     else if (args[0] == "help" && args[1] == "say") {
         message.channel.send("**Hey Gamer, say 'Sentence'**");
@@ -87,7 +98,7 @@ client.on('message', message => {
         message.channel.send("**Hey Gamer, dobbelsteen (1 - 6)\n**of **Hey Gamer, dobbelsteen 'nummer' (1 - nummer)\n**of **Hey Gamer, dobbelsteen 'minimum' 'maximum' (min. - max.)**");
     }
     else if (args == "embed") {
-        message.channel.send(helpEmbed);
+        message.channel.send(exampleEmbed);
     }
 
     else if (args[0] == "broadcast") {
