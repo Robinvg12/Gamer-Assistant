@@ -84,7 +84,7 @@ client.on('message', message => {
         message.channel.send("**Hey Gamer, dobbelsteen (1 - 6)\n**of **Hey Gamer, dobbelsteen 'nummer' (1 - nummer)\n**of **Hey Gamer, dobbelsteen 'minimum' 'maximum' (min. - max.)**");
     }
     else if (args[0] == "selfreact") {
-        if (message.member.roles.find(r => r.name === "Admin") {
+        if (message.member.roles.find(r => r.name === "Admin")) {
             message.delete({ timeout: 1 });
             selfreact = true;
         } else {
@@ -92,7 +92,7 @@ client.on('message', message => {
         }
     }
     else if (args[0] == "noselfreact") {
-        if (message.member.roles.find(r => r.name === "Admin") {
+        if (message.member.roles.find(r => r.name === "Admin")) {
             message.delete({ timeout: 1 });
             selfreact = false;
         } else {
