@@ -32,7 +32,7 @@ client.on('message', message => {
     //message.channel.send('res: ' + res);
 
 
-    const args = res.slice(prefix.length).split(/ +/);
+    var args = res.slice(prefix.length).split(/ +/);
     const args2 = str.split(/ +/);
     args.shift();
     //message.channel.send('args: ' + args);
