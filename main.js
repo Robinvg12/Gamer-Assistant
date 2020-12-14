@@ -179,6 +179,8 @@ client.on('message', message => {
         message.channel.send("Age is " + Math.round(random2));
     }
     else if (args[0] == "dice" || args[0] == "dobbelsteen" || args[0] == "roll") {
+        var args[0] = "1"
+        var args = args.replace(/[^0-9]/g, '')
         message.channel.send("Rolling...")
         message.channel.send("args.length " + args.length)
         message.channel.send("args[0] " + args[0])
@@ -186,16 +188,19 @@ client.on('message', message => {
         message.channel.send("args[2] " + args[2])
         setTimeout(() => {
             if (args.length == 2) {
-                var max = args[1].replace(/[^0-9]/g, '')
-                var rand_dice = (Math.random() * (max - 1)) + 1;
+                var max = args[1];
+                var rand_dice = (Math.random() * (max - 1));
+                message.channel.send("You rolled: " + Math.round(rand_dice) + 1);
             } else if (args.length == 3) {
-                var min = args[1].replace(/[^0-9]/g, '')
-                var max = args[2].replace(/[^0-9]/g, '')
-                var rand_dice = (Math.random() * (max - min)) + min;
+                var min = args[1];
+                var max = args[2];
+                var rand_dice = (Math.random() * (max - min));
+                message.channel.send("You rolled: " + Math.round(rand_dice) + min);
             } else {
-                var rand_dice = Math.random() * 5 + 1;
+                var rand_dice = Math.random() * 5;
+                message.channel.send("You rolled: " + Math.round(rand_dice)+1);
             }
-            message.channel.send("You rolled: " + Math.round(rand_dice));
+            
         }, 1000);
     }
     
