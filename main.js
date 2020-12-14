@@ -69,13 +69,13 @@ client.on('message', message => {
         message.channel.send("**Hey Gamer, Zeg 'Zin'**");
     }
     else if (args[0] == "help" && args[1] == "dice") {
-        message.channel.send("**Hey Gamer, dice (1-6)\n**or**Hey Gamer, dice 'number' (1-number)\n**or**Hey Gamer, dice 'minimum' 'maximum' (min.-max.)**");
+        message.channel.send("**Hey Gamer, dice (1 - 6)\n**or **Hey Gamer, dice 'number' (1 - number)\n**or **Hey Gamer, dice 'minimum' 'maximum' (min. - max.)**");
     }
     else if (args[0] == "help" && args[1] == "roll") {
-        message.channel.send("**Hey Gamer, roll (1-6)\n**or**Hey Gamer, roll 'number' (1-number)\n**or**Hey Gamer, roll 'minimum' 'maximum' (min.-max.)**");
+        message.channel.send("**Hey Gamer, roll (1 - 6)\n**or **Hey Gamer, roll 'number' (1 - number)\n**or **Hey Gamer, roll 'minimum' 'maximum' (min. - max.)**");
     }
     else if (args[0] == "help" && args[1] == "dobbelsteen") {
-        message.channel.send("**Hey Gamer, dobbelsteen (1-6)\n**of**Hey Gamer, dobbelsteen 'nummer' (1-nummer)\n**of**Hey Gamer, dobbelsteen 'minimum' 'maximum' (min.-max.)**");
+        message.channel.send("**Hey Gamer, dobbelsteen (1 - 6)\n**of **Hey Gamer, dobbelsteen 'nummer' (1 - nummer)\n**of **Hey Gamer, dobbelsteen 'minimum' 'maximum' (min. - max.)**");
     }
 
     else if (args[0] == "broadcast") {
