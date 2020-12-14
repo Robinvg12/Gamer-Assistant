@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 const prefix = 'hey gamer';
 
-car selfreact = false;
+var selfreact = false;
 
 client.once('ready', () => {
     console.log('Gamer Assistant is online!');
