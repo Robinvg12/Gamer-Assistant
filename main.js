@@ -179,12 +179,22 @@ client.on('message', message => {
         message.channel.send("Age is " + Math.round(random2));
     }
     else if (args[0] == "dice" || args[0] == "dobbelsteen") {
-        msg = message.channel.send('Rolling.');
-        setTimeout(() => { msg.edit("Rolling..");; }, 200);
-        setTimeout(() => { msg.edit("Rolling...");; }, 400);
-        setTimeout(() => { msg.edit("Rolling.");; }, 600);
-        setTimeout(() => { msg.edit("Rolling..");; }, 800);
-        setTimeout(() => { msg.edit("Rolling...");; }, 1000);
+        message.channel.send("Rolling.").then(sentMessage => {
+            sentMessage.delete(200);
+        });
+        message.channel.send("Rolling..").then(sentMessage => {
+            sentMessage.delete(400);
+        });
+        message.channel.send("Rolling...").then(sentMessage => {
+            sentMessage.delete(600);
+        });
+        message.channel.send("Rolling.").then(sentMessage => {
+            sentMessage.delete(800);
+        });
+        message.channel.send("Rolling..").then(sentMessage => {
+            sentMessage.delete(1000);
+        });
+        message.channel.send("Rolling...")
         setTimeout(() => {
             if (args.length == 2) {
                 var max = args[1].replace(/[^0-9]/g, '')
