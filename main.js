@@ -21,7 +21,23 @@ const yesno_list = ["Yes",       "No",               "Maybe...",
 
 const is_list = ["is", "was", "am", "are", "were", "did", "does", "has", "have", "had"]
 
-
+const exampleEmbed = new Discord.MessageEmbed()
+    .setColor('#0099ff')
+    .setTitle('Some title')
+    .setURL('https://discord.js.org/')
+    .setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+    .setDescription('Some description here')
+    .setThumbnail('https://i.imgur.com/wSTFkRM.png')
+    .addFields(
+        { name: 'Regular field title', value: 'Some value here' },
+        { name: '\u200B', value: '\u200B' },
+        { name: 'Inline field title', value: 'Some value here', inline: true },
+        { name: 'Inline field title', value: 'Some value here', inline: true },
+    )
+    .addField('Inline field title', 'Some value here', true)
+    .setImage('https://i.imgur.com/wSTFkRM.png')
+    .setTimestamp()
+    .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
 
 client.on('message', message => {
 
@@ -78,6 +94,9 @@ client.on('message', message => {
     }
     else if (args[0] == "help" && args[1] == "dobbelsteen") {
         message.channel.send("**Hey Gamer, dobbelsteen (1 - 6)\n**of **Hey Gamer, dobbelsteen 'nummer' (1 - nummer)\n**of **Hey Gamer, dobbelsteen 'minimum' 'maximum' (min. - max.)**");
+    }
+    else if (args == "embed") {
+        channel.send(exampleEmbed);
     }
 
     else if (args[0] == "broadcast") {
