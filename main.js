@@ -179,13 +179,13 @@ client.on('message', message => {
         message.channel.send("Age is " + Math.round(random2));
     }
     else if (args[0] == "dice" || args[0] == "dobbelsteen" || args[0] == "roll") {
-        var args[0] = "1"
+        args[0] = "1"
         var args = args.replace(/[^0-9]/g, '')
         message.channel.send("Rolling...")
-        message.channel.send("args.length " + args.length)
-        message.channel.send("args[0] " + args[0])
-        message.channel.send("args[1] " + args[1])
-        message.channel.send("args[2] " + args[2])
+        //message.channel.send("args.length " + args.length)
+        //message.channel.send("args[0] " + args[0])
+        //message.channel.send("args[1] " + args[1])
+        //message.channel.send("args[2] " + args[2])
         setTimeout(() => {
             if (args.length == 2) {
                 var max = args[1];
