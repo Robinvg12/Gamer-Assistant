@@ -194,12 +194,12 @@ client.on('message', message => {
         //message.channel.send("args[2] " + args[2])
         setTimeout(() => {
             if (args.length == 2) {
-                var max = args[1];
+                var max = Number(args[1]);
                 var rand_dice = (Math.random() * (max - 1));
                 message.channel.send("You rolled: " + Math.round(rand_dice+1));
             } else if (args.length == 3) {
-                var min = args[1];
-                var max = args[2];
+                var min = Number(args[1]);
+                var max = Number(args[2]);
                 message.channel.send(min + max);
                 var rand_dice = (Math.random() * (max - min));
                 message.channel.send("You rolled: " + Math.round(rand_dice));
