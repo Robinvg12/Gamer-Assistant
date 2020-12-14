@@ -187,11 +187,11 @@ client.on('message', message => {
         setTimeout(() => {
             if (args.length == 2) {
                 var max = args[1].replace(/[^0-9]/g, '')
-                var rand_dice = Math.random() * max;
+                var rand_dice = (Math.random() * (max - 1)) + 1;
             } else if (args.length == 3) {
                 var min = args[1].replace(/[^0-9]/g, '')
                 var max = args[2].replace(/[^0-9]/g, '')
-                var rand_dice = Math.random() * (max - min) + min;
+                var rand_dice = (Math.random() * (max - min)) + min;
             } else {
                 var rand_dice = Math.random() * 5 + 1;
             }
