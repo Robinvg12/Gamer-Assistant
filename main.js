@@ -200,6 +200,7 @@ client.on('message', message => {
             } else if (args.length == 3) {
                 var min = args[1];
                 var max = args[2];
+                message.channel.send(min + max);
                 var rand_dice = (Math.random() * (max - min));
                 message.channel.send("You rolled: " + Math.round(rand_dice));
                 rand_dice = rand_dice + min;
