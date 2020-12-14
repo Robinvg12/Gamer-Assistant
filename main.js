@@ -21,23 +21,14 @@ const yesno_list = ["Yes",       "No",               "Maybe...",
 
 const is_list = ["is", "was", "am", "are", "were", "did", "does", "has", "have", "had"]
 
-const exampleEmbed = new Discord.MessageEmbed()
+const helpEmbed = new Discord.MessageEmbed()
     .setColor('#0099ff')
-    .setTitle('Some title')
-    .setURL('https://discord.js.org/')
-    .setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
-    .setDescription('Some description here')
-    .setThumbnail('https://i.imgur.com/wSTFkRM.png')
-    .addFields(
-        { name: 'Regular field title', value: 'Some value here' },
-        { name: '\u200B', value: '\u200B' },
-        { name: 'Inline field title', value: 'Some value here', inline: true },
-        { name: 'Inline field title', value: 'Some value here', inline: true },
-    )
-    .addField('Inline field title', 'Some value here', true)
-    .setImage('https://i.imgur.com/wSTFkRM.png')
+    .setTitle('Commands:')
+    .setAuthor('Gamer Assistant', 'http://prnt.sc/w2ii62')
+    .setDescription("Commands:\n**Help** = List of all the commands.\n**Help 'command'** = View command.\n**... ping ...** = Pong.\n**Spam 'Word/Sentence'** = Spams that word or sentence.\n**Say 'Word/Sentence'** = Says that word or sentence.\n**Broadcast 'Word/Sentence'** = Says that word or sentence and deletes your message.\n**... name ...** = Generates a random name.\n**... old/age ...** = Generates random age.\n**Dice/Roll 'number'** = Rolls dice for a number between 1 and that number.\nor **Dice/Roll 'min number' 'max number'** = Rolls dice for a number between the min. and max.\n**Anything else** = Yes or No awnser.")
+    .setThumbnail('http://prnt.sc/w2ii62')
     .setTimestamp()
-    .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+    .setFooter('Gamer Assistant');
 
 client.on('message', message => {
 
@@ -96,7 +87,7 @@ client.on('message', message => {
         message.channel.send("**Hey Gamer, dobbelsteen (1 - 6)\n**of **Hey Gamer, dobbelsteen 'nummer' (1 - nummer)\n**of **Hey Gamer, dobbelsteen 'minimum' 'maximum' (min. - max.)**");
     }
     else if (args == "embed") {
-        message.channel.send(exampleEmbed);
+        message.channel.send(helpEmbed);
     }
 
     else if (args[0] == "broadcast") {
