@@ -47,10 +47,11 @@ client.on('message', message => {
         return;
     }
     if (args == "help") {
-        message.channel.send("Commands:\n**Help** = List of all the commands.\n**... ping ...** = Pong.\n**Spam \"Word/Sentence\"** = Spams that word or sentence.\n**Say \"Word/Sentence\"** = Says that word or sentence.\n**Broadcast \"Word/Sentence\"** = Says that word or sentence and deletes your message.\n**... name ...** = Generates a random name.\n**Anything else** = Yes or No awnser.");
+        message.channel.send("Commands:\n**Help** = List of all the commands.\n**... ping ...** = Pong.\n**Spam \"Word/Sentence\"** = Spams that word or sentence.\n**Say \"Word/Sentence\"** = Says that word or sentence.\n**Broadcast \"Word/Sentence\"** = Says that word or sentence and deletes your message.\n**... name ...** = Generates a random name.\n**... old/age ...** = Generates random age.\n**Dice \"number\"** = Rolls dice for a number between 1 and that number.\nor **Dice \"min number\" \"max number\"** = Rolls dice for a number between the min. and max.\n**Anything else** = Yes or No awnser.");
     }
     else if (args[0] == "help" && args[1] == "nl") {
-        message.channel.send("Commands:\n**Help** = Lijst met alle commando's.\n**... ping ...** = Pong.\n**Spam \"Woord/Zin\"** = Spamt dat woord of die zin.\n**Zeg \"Woord/Zin\"** = Zegt dat woord of die zin.\n**Broadcast \"Woord/Zin\"** = Zegt dat woord of die zin en verwijderd jouw bericht.\n**... naam ...** = Genereert een willekeurige naam.\n**Al het andere** = Engelse Ja of Nee antwoord.");
+        message.channel.send("Commands:\n**Help** = Lijst met alle commando's.\n**... ping ...** = Pong.\n**Spam \"Woord/Zin\"** = Spamt dat woord of die zin.\n**Zeg \"Woord/Zin\"** = Zegt dat woord of die zin.\n**Broadcast \"Woord/Zin\"** = Zegt dat woord of die zin en verwijderd jouw bericht.\n**... naam ...** = Genereert een willekeurige naam.\n**... oud ...** = Genereert een willekeurige leeftijd.\n**Dobbelsteen \"nummer\"** = Rolt dobbelsteen voor een nummer tussen 1 en dat nummer.\nor **Dobbelsteen \"min nummer\" \"max nummer\"** = Rolt dobbelsteen voor een nummer tussen min. en max.\n**Al het andere** = Engelse Ja of Nee antwoord.");
+
     }
     else if (args[0] == "broadcast") {
         var fruits = args2;
@@ -166,6 +167,39 @@ client.on('message', message => {
         var rand_name = rand_adj + " " + rand_noun;
         message.channel.send(rand_name);
     }
+    else if (args.includes("age") || args.includes("old") || args.includes("oud")) {
+        var random1 = Math.random() * 6;
+        if (random1 == 1) {
+            var random2 = Math.random() * 1000;
+        } else if (random1 < 3) {
+            var random2 = Math.random() * 80;
+        } else {
+            var random2 = Math.random() * 20;
+        }
+        message.channel.send("Age is " + random2);
+    }
+    else if (args[0] == "dice" || args[0] == "dobbelsteen") {
+        message.channel.send("Rolling.");
+        setTimeout(() => { message.edit("Rolling..");; }, 200);
+        setTimeout(() => { message.edit("Rolling...");; }, 400);
+        setTimeout(() => { message.edit("Rolling.");; }, 600);
+        setTimeout(() => { message.edit("Rolling..");; }, 800);
+        setTimeout(() => { message.edit("Rolling...");; }, 1000);
+        setTimeout(() => {
+            if (args.length == 2) {
+                var max = args[1].replace(/[^0-9]/g, '')
+                rand_dice = Math.random() * max;
+            } else if (args.length == 3) {
+                var min = args[1].replace(/[^0-9]/g, '')
+                var max = args[2].replace(/[^0-9]/g, '')
+                rand_dice = Math.random() * (max - min) + min;
+            } else {
+                rand_dice = Math.random() * 5 + 1;
+            }
+            message.channel.send("You rolled: " + rand_dice);
+        }, 1200);
+    }
+    
     else if (args[0] == "ping") {
         message.channel.send("Pong!");
     }
