@@ -46,11 +46,7 @@ client.on('message', message => {
         setTimeout(() => { message.channel.send(`Type "Hey gamer help" for a list of commands`); }, 1500);
         return;
     }
-
-    //var ping = args.includes("ping");
-    //var spam = args.includes("spam");
-    //var is = args.some(r => is_list.indexOf(r) >= 0);
-    else if (args == "help") {
+    if (args == "help") {
         message.channel.send("Commands:\n**Help** = List of all the commands.\n**... ping ...** = Pong.\n**Spam \"Word/Sentence\"** = Spams that word or sentence.\n**Say \"Word/Sentence\"** = Says that word or sentence.\n**Broadcast \"Word/Sentence\"** = Says that word or sentence and deletes your message.\n**... name ...** = Generates a random name.\n**Anything else** = Yes or No awnser.");
     }
     else if (args[0] == "help" && args[1] == "nl") {
@@ -172,8 +168,7 @@ client.on('message', message => {
     }
     else if (args[0] = "ping") {
         message.channel.send('Pong!');
-
-    } 
+    }
     else {
         var rand_word = yesno_list[Math.floor(Math.random() * yesno_list.length)];
         message.channel.send(rand_word);
