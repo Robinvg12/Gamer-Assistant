@@ -179,7 +179,7 @@ client.on('message', message => {
         message.channel.send("Age is " + Math.round(random2));
     }
     else if (args[0] == "dice" || args[0] == "dobbelsteen") {
-        msg = await message.channel.send('Rolling.');
+        msg = message.channel.send('Rolling.');
         setTimeout(() => { msg.edit("Rolling..");; }, 200);
         setTimeout(() => { msg.edit("Rolling...");; }, 400);
         setTimeout(() => { msg.edit("Rolling.");; }, 600);
