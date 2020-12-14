@@ -179,21 +179,6 @@ client.on('message', message => {
         message.channel.send("Age is " + Math.round(random2));
     }
     else if (args[0] == "dice" || args[0] == "dobbelsteen") {
-        message.channel.send("Rolling.").then(sentMessage => {
-            sentMessage.delete(200);
-        });
-        message.channel.send("Rolling..").then(sentMessage => {
-            sentMessage.delete(400);
-        });
-        message.channel.send("Rolling...").then(sentMessage => {
-            sentMessage.delete(600);
-        });
-        message.channel.send("Rolling.").then(sentMessage => {
-            sentMessage.delete(800);
-        });
-        message.channel.send("Rolling..").then(sentMessage => {
-            sentMessage.delete(1000);
-        });
         message.channel.send("Rolling...")
         setTimeout(() => {
             if (args.length == 2) {
@@ -207,7 +192,7 @@ client.on('message', message => {
                 rand_dice = Math.random() * 5 + 1;
             }
             message.channel.send("You rolled: " + Math.round(rand_dice));
-        }, 1200);
+        }, 1000);
     }
     
     else if (args[0] == "ping") {
