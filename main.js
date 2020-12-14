@@ -47,12 +47,37 @@ client.on('message', message => {
         return;
     }
     if (args == "help") {
-        message.channel.send("Commands:\n**Help** = List of all the commands.\n**... ping ...** = Pong.\n**Spam \"Word/Sentence\"** = Spams that word or sentence.\n**Say \"Word/Sentence\"** = Says that word or sentence.\n**Broadcast \"Word/Sentence\"** = Says that word or sentence and deletes your message.\n**... name ...** = Generates a random name.\n**... old/age ...** = Generates random age.\n**Dice/Roll \"number\"** = Rolls dice for a number between 1 and that number.\nor **Dice/Roll \"min number\" \"max number\"** = Rolls dice for a number between the min. and max.\n**Anything else** = Yes or No awnser.");
+        message.channel.send("Commands:\n**Help** = List of all the commands.\n**... ping ...** = Pong.\n**Spam 'Word/Sentence'** = Spams that word or sentence.\n**Say 'Word/Sentence'** = Says that word or sentence.\n**Broadcast 'Word/Sentence'** = Says that word or sentence and deletes your message.\n**... name ...** = Generates a random name.\n**... old/age ...** = Generates random age.\n**Dice/Roll 'number'** = Rolls dice for a number between 1 and that number.\nor **Dice/Roll 'min number' 'max number'** = Rolls dice for a number between the min. and max.\n**Anything else** = Yes or No awnser.");
     }
     else if (args[0] == "help" && args[1] == "nl") {
-        message.channel.send("Commands:\n**Help** = Lijst met alle commando's.\n**... ping ...** = Pong.\n**Spam \"Woord/Zin\"** = Spamt dat woord of die zin.\n**Zeg \"Woord/Zin\"** = Zegt dat woord of die zin.\n**Broadcast \"Woord/Zin\"** = Zegt dat woord of die zin en verwijderd jouw bericht.\n**... naam ...** = Genereert een willekeurige naam.\n**... oud ...** = Genereert een willekeurige leeftijd.\n**Dobbelsteen/Roll \"nummer\"** = Rolt dobbelsteen voor een nummer tussen 1 en dat nummer.\nor **Dobbelsteen/Roll \"min nummer\" \"max nummer\"** = Rolt dobbelsteen voor een nummer tussen min. en max.\n**Al het andere** = Engelse Ja of Nee antwoord.");
+        message.channel.send("Commands:\n**Help** = Lijst met alle commando's.\n**... ping ...** = Pong.\n**Spam 'Woord/Zin'** = Spamt dat woord of die zin.\n**Zeg 'Woord/Zin'** = Zegt dat woord of die zin.\n**Broadcast 'Woord/Zin'** = Zegt dat woord of die zin en verwijderd jouw bericht.\n**... naam ...** = Genereert een willekeurige naam.\n**... oud ...** = Genereert een willekeurige leeftijd.\n**Dobbelsteen/Roll 'nummer'** = Rolt dobbelsteen voor een nummer tussen 1 en dat nummer.\nor **Dobbelsteen/Roll 'min nummer' 'max nummer'** = Rolt dobbelsteen voor een nummer tussen min. en max.\n**Al het andere** = Engelse Ja of Nee antwoord.");
 
     }
+    else if (args[0] == "help" && args[1] == "spam") {
+        message.channel.send("**Hey Gamer, spam 'Sentence' 'amount'**");
+    }
+    else if (args[0] == "help" && args[1] == "say") {
+        message.channel.send("**Hey Gamer, say 'Sentence'**");
+    }
+    else if (args[0] == "help" && args[1] == "zeg") {
+        message.channel.send("**Hey Gamer, Zeg 'Zin'**");
+    }
+    else if (args[0] == "help" && args[1] == "broadcast") {
+        message.channel.send("**Hey Gamer, broadcast 'Sentence'**");
+    }
+    else if (args[0] == "help" && args[1] == "zeg") {
+        message.channel.send("**Hey Gamer, Zeg 'Zin'**");
+    }
+    else if (args[0] == "help" && args[1] == "dice") {
+        message.channel.send("**Hey Gamer, dice (1-6)\n**or**Hey Gamer, dice 'number' (1-number)\n**or**Hey Gamer, dice 'minimum' 'maximum' (min.-max.)**");
+    }
+    else if (args[0] == "help" && args[1] == "roll") {
+        message.channel.send("**Hey Gamer, roll (1-6)\n**or**Hey Gamer, roll 'number' (1-number)\n**or**Hey Gamer, roll 'minimum' 'maximum' (min.-max.)**");
+    }
+    else if (args[0] == "help" && args[1] == "dobbelsteen") {
+        message.channel.send("**Hey Gamer, dobbelsteen (1-6)\n**of**Hey Gamer, dobbelsteen 'nummer' (1-nummer)\n**of**Hey Gamer, dobbelsteen 'minimum' 'maximum' (min.-max.)**");
+    }
+
     else if (args[0] == "broadcast") {
         var fruits = args2;
         fruits.shift();
