@@ -166,7 +166,7 @@ client.on('message', message => {
         var rand_name = rand_adj + " " + rand_noun;
         message.channel.send(rand_name);
     }
-    else if (args[0] = "ping") {
+    else if (args == "ping") {
         message.channel.send('Pong!');
     }
     else {
