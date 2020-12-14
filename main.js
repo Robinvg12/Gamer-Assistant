@@ -176,15 +176,15 @@ client.on('message', message => {
         } else {
             var random2 = Math.random() * 20;
         }
-        message.channel.send("Age is " + random2);
+        message.channel.send("Age is " + Math.round(random2));
     }
     else if (args[0] == "dice" || args[0] == "dobbelsteen") {
-        message.channel.send("Rolling.");
-        setTimeout(() => { message.edit("Rolling..");; }, 200);
-        setTimeout(() => { message.edit("Rolling...");; }, 400);
-        setTimeout(() => { message.edit("Rolling.");; }, 600);
-        setTimeout(() => { message.edit("Rolling..");; }, 800);
-        setTimeout(() => { message.edit("Rolling...");; }, 1000);
+        msg = await message.channel.send('Rolling.');
+        setTimeout(() => { msg.edit("Rolling..");; }, 200);
+        setTimeout(() => { msg.edit("Rolling...");; }, 400);
+        setTimeout(() => { msg.edit("Rolling.");; }, 600);
+        setTimeout(() => { msg.edit("Rolling..");; }, 800);
+        setTimeout(() => { msg.edit("Rolling...");; }, 1000);
         setTimeout(() => {
             if (args.length == 2) {
                 var max = args[1].replace(/[^0-9]/g, '')
@@ -196,7 +196,7 @@ client.on('message', message => {
             } else {
                 rand_dice = Math.random() * 5 + 1;
             }
-            message.channel.send("You rolled: " + rand_dice);
+            message.channel.send("You rolled: " + Math.round(rand_dice));
         }, 1200);
     }
     
