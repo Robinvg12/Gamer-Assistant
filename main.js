@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 const prefix = 'hey gamer';
 
-var selfreact = false;
+
 
 client.once('ready', () => {
     console.log('Gamer Assistant is online!');
@@ -21,7 +21,7 @@ const yesno_list = ["Yes",       "No",               "Maybe...",
 
 const is_list = ["is", "was", "am", "are", "were", "did", "does", "has", "have", "had"]
 
-
+var selfreact = false;
 
 client.on('message', message => {
 
