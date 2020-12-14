@@ -182,9 +182,9 @@ client.on('message', message => {
         args[0] = "1"
         message.channel.send("args " + args);
         args_str = args.join(",");
-        message.channel.send("args join " + args_join);
+        message.channel.send("args join " + args_str);
         args_str = args_str.replace(/[^0-9,]/g, '')
-        message.channel.send("args join replaced " + args_join);
+        message.channel.send("args join replaced " + args_str);
         args = args_str.split(",");
         message.channel.send("args split " + args)
         message.channel.send("Rolling...")
