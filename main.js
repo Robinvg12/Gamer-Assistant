@@ -96,7 +96,7 @@ client.on('message', message => {
         message.channel.send("**Hey Gamer, dobbelsteen (1 - 6)\n**of **Hey Gamer, dobbelsteen 'nummer' (1 - nummer)\n**of **Hey Gamer, dobbelsteen 'minimum' 'maximum' (min. - max.)**");
     }
     else if (args == "embed") {
-        channel.send(exampleEmbed);
+        message.channel.send(exampleEmbed);
     }
 
     else if (args[0] == "broadcast") {
