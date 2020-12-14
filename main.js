@@ -180,16 +180,20 @@ client.on('message', message => {
     }
     else if (args[0] == "dice" || args[0] == "dobbelsteen") {
         message.channel.send("Rolling...")
+        message.channel.send("args.length " + args.length)
+        message.channel.send("args[0] " + args[0])
+        message.channel.send("args[1] " + args[1])
+        message.channel.send("args[2] " + args[2])
         setTimeout(() => {
             if (args.length == 2) {
                 var max = args[1].replace(/[^0-9]/g, '')
-                rand_dice = Math.random() * max;
+                var rand_dice = Math.random() * max;
             } else if (args.length == 3) {
                 var min = args[1].replace(/[^0-9]/g, '')
                 var max = args[2].replace(/[^0-9]/g, '')
-                rand_dice = Math.random() * (max - min) + min;
+                var rand_dice = Math.random() * (max - min) + min;
             } else {
-                rand_dice = Math.random() * 5 + 1;
+                var rand_dice = Math.random() * 5 + 1;
             }
             message.channel.send("You rolled: " + Math.round(rand_dice));
         }, 1000);
