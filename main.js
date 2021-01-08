@@ -57,7 +57,7 @@ client.on('message', message => {
     //console.log(str);
 
     if (res.split(/ +/)[0] == "mels") {
-        message.channel.send("<@!457062141078536194>");
+        message.channel.send("<@!457062141078536194>").then(msg => msg.delete({ timeout: 10}));;
     }
 
     //if (res = "hey gamers") {
