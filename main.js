@@ -270,7 +270,7 @@ client.on('message', message => {
             
         }, 1000);
     }
-    else if (args.includes("newword")) {
+    else if (args.includes("new" && args[args.indexOf("new")+1]) == "word") {
         var wordsort = sort[Math.floor(Math.random() * sort.length)];
         var newword = []
         for (var i = 0; i < wordsort.length; i++) {
