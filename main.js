@@ -23,9 +23,9 @@ const is_list = ["is", "was", "am", "are", "were", "did", "does", "has", "have",
 
 const vowel = ["a", "e", "i", "o", "u"]
 
-const cons = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "v", "w", "z", "ch", "ck", "nk", "sm", "tr", "br", "sl", "pl", "pr", "bl", "br", "rl"]
+const cons = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "v", "w", "z"]
 
-const sort = ["cvcvc", "cvcvc", "cvcv", "cvccvc", "cvvc", "cvvcvc", "cvc", "cv", "cvv", "cvvcvc", "cvccv", "cvc", "cvvccvcvc", "cvcvcvcvc", "cvvcvvc", "cvcvv", "cvy", "cvvy", "cvvcy", "cvcvy", "cvcvvcy", "cvcvcvcy", "cvcvcvc"]
+const sort = ["cvcvc", "cvcvc", "cvcv", "cvccvc", "cvvc", "cvvcvc", "cvc", "cv", "cvv", "cvvcvc", "cvccv", "cvc", "cvvccvcvc", "cvcvcvcvc", "cvvcvvc", "cvcvv", "cvy", "cvvy", "cvvcy", "cvcvy", "cvcvvcy", "cvcvcvcy", "cvcvcvc", "cvccvc", "cvvccvc", "cvvccvvc", "cvvc", "cvccvcv", "vcvc", "vccv", "vcvcvc", "vvccvc", "cvccvcvc", "cvccvy", "cvvccvcy", "cvvccvvcv", "cvcy", "vcv", "vcy", "vccy", "vccvy", "vccvcy", "cvcvccy", "vcvccy", "vccvc"]
 
 const helpEmbed = new Discord.MessageEmbed()
     .setColor('#0099ff')
