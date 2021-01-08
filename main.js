@@ -12,14 +12,20 @@ client.once('ready', () => {
 });
 
 
-const yesno_list = ["Yes",       "No",               "Maybe...",
-                    "Sure!",     "Obviously not", "Perhaps...",
-                    "Hell yeah", "Hell no",
+const yesno_list = ["Yes",        "No",               "Maybe...",
+                    "Sure!",      "Obviously not",    "Perhaps...",
+                    "Hell yeah",  "Hell no",
                     "Absolutely", "Absolutely not",
-                    "Off course", "Nope",
+                    "Of course",  "Nope",
                     "Why not",    "That's not a good idea"]
 
 const is_list = ["is", "was", "am", "are", "were", "did", "does", "has", "have", "had"]
+
+const vowel = ["a", "e", "i", "o", "u", "aa", "ee", "oo", "uu", "ou", "ea", "eu"]
+
+const cons = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "v", "w", "z", "ch", "bb", "dd", "ff", "gg", "hh", "ck", "ll", "nn", "pp", "ss", "tt", "nk", "sm", "tr", "br", "sl", "pl", "pr", "bl", "br", "rl"]
+
+const sort = ["cvcvc", "cvcvc", "cvcv", "cvccvc", "cvvc", "cvvcvc", "cvc", "cv", "cvv", "cvvcvc", "cvccv", "cvc", "cvvccvcvc", "cvcvcvcvc", "cvvcvvc", "cvcvv", "cvy", "cvvy", "cvvcy", "cvcvy", "cvcvvcy", "cvcvcvcy", "cvcvcvc"]
 
 const helpEmbed = new Discord.MessageEmbed()
     .setColor('#0099ff')
@@ -263,6 +269,23 @@ client.on('message', message => {
             }
             
         }, 1000);
+    }
+    else if (args.includes("newword")) {
+        var wordsort = sort[Math.floor(Math.random() * sort.length)];
+        var newword = []
+        for (var i = 0; i < wordsort.length; i++) {
+            if (wordsort.charAt(i) == "c") {
+                var temp_letter = cons[Math.floor(Math.random() * cons.length)]
+            }
+            else if if (wordsort.charAt(i) == "y") {
+                var temp_letter = "y"
+            }
+            else {
+                var temp_letter = vowel[Math.floor(Math.random() * vowel.length)]
+            }
+            newword = newword + [temp_letter]
+        }
+        message.channel.send(newword.toString());
     }
     
     else if (args[0] == "ping") {
