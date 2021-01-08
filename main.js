@@ -49,6 +49,7 @@ const helpEmbed = new Discord.MessageEmbed()
 client.on('message', message => {
 
     var str = message.content;
+    var str2 = message.content.toLowerCase();
     var res = str.toLowerCase().replace(/[^A-Za-z0-9\s<>@:]/g, '');
 
     //console.log(str);
@@ -270,7 +271,7 @@ client.on('message', message => {
             
         }, 1000);
     }
-    else if (args.includes("new" && args[args.indexOf("new")+1]) == "word") {
+    else if (str2.includes("new word") {
         var wordsort = sort[Math.floor(Math.random() * sort.length)];
         var newword = []
         for (var i = 0; i < wordsort.length; i++) {
