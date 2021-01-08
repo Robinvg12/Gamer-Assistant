@@ -51,7 +51,10 @@ client.on('message', message => {
         message.channel.send("<@!457062141078536194>");
     }
 
-    if (!res.startsWith(prefix) || message.author.bot) return;
+    if (res = "hey gamers") {
+        message.channel.send("Hi I'm a gamer");
+    }
+    else if (!res.startsWith(prefix) || message.author.bot) return;
 
     //message.channel.send('mc: ' + message.content);
     //message.channel.send('res: ' + res);
