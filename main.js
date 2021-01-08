@@ -47,13 +47,13 @@ client.on('message', message => {
 
     //console.log(str);
 
-    if (res.split(/ +/)[0] == "mels") {
-        message.channel.send("<@!457062141078536194>");
-    }
+    //if (res.split(/ +/)[0] == "mels") {
+    //    message.channel.send("<@!457062141078536194>");
+    //}
 
-    if (res = "hey gamers") {
-        message.channel.send("Hi I'm a gamer");
-    }
+    //if (res = "hey gamers") {
+    //    message.channel.send("Hi I'm a gamer");
+    //}
     if (!res.startsWith(prefix) || message.author.bot) return;
 
     //message.channel.send('mc: ' + message.content);
