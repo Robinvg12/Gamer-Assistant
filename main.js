@@ -145,7 +145,7 @@ client.on('message', message => {
         } else {
             var number = false
         }
-        var last = fruits[fruits.length - 1].replace(/[^0-9@]/g, '');
+        var last = fruits[fruits.length - 1].replace(/[^0-9>]/g, '');
         
         if (number) {
             if (last.charAt(0) == ">") {
