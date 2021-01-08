@@ -277,7 +277,7 @@ client.on('message', message => {
             if (wordsort.charAt(i) == "c") {
                 var temp_letter = cons[Math.floor(Math.random() * cons.length)]
             }
-            else if if (wordsort.charAt(i) == "y") {
+            else if (wordsort.charAt(i) == "y") {
                 var temp_letter = "y"
             }
             else {
