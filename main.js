@@ -17,7 +17,9 @@ const yesno_list = ["Yes",        "No",               "Maybe...",
                     "Hell yeah",  "Hell no",
                     "Absolutely", "Absolutely not",
                     "Of course",  "Nope",
-                    "Why not",    "That's not a good idea"]
+                    "Why not", "That's not a good idea"]
+
+const why_list = ["I don't know", "Ask your mom", "Because, thats how life is"]
 
 const is_list = ["is", "was", "am", "are", "were", "did", "does", "has", "have", "had"]
 
@@ -188,7 +190,7 @@ client.on('message', message => {
 
         else {
             for (var i = 0; i < spam_len; i++) {
-                message.channel.send(fruits.join(" "));
+                message.channel.send(fruits.join(" ")).then(msg => msg.delete({ timeout: 20000}));;
             }
         }
 
