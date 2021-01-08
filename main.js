@@ -281,7 +281,12 @@ client.on('message', message => {
                 var temp_letter = cons[Math.floor(Math.random() * cons.length)]
             }
             else if (wordsort.charAt(i) == "y") {
-                var temp_letter = "y"
+                if (str2.includes("new word")) {
+                    var temp_letter = "y"
+                }
+                else {
+                    return
+                }
             }
             else {
                 var temp_letter = vowel[Math.floor(Math.random() * vowel.length)]
