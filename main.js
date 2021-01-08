@@ -23,7 +23,7 @@ const is_list = ["is", "was", "am", "are", "were", "did", "does", "has", "have",
 
 const vowel = ["a", "e", "i", "o", "u"]
 
-const cons = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "v", "w", "z"]
+const cons = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "w"]
 
 const sort = ["cvcvc", "cvcvc", "cvcv", "cvccvc", "cvvc", "cvvcvc", "cvc", "cv", "cvv", "cvvcvc", "cvccv", "cvc", "cvvccvcvc", "cvcvcvcvc", "cvvcvvc", "cvcvv", "cvy", "cvvy", "cvvcy", "cvcvy", "cvcvvcy", "cvcvcvcy", "cvcvcvc", "cvccvc", "cvvccvc", "cvvccvvc", "cvvc", "cvccvcv", "vcvc", "vccv", "vcvcvc", "vvccvc", "cvccvcvc", "cvccvy", "cvvccvcy", "cvvccvvcv", "cvcy", "vcv", "vcy", "vccy", "vccvy", "vccvcy", "cvcvccy", "vcvccy", "vccvc"]
 
