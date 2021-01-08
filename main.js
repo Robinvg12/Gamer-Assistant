@@ -47,7 +47,7 @@ client.on('message', message => {
 
     //console.log(str);
 
-    if (res.split(/ +/)[0] == "mels") {
+    if (res.split(/ +/)[0] == "mels" && res.split(/ +/).length == 1) {
         message.channel.send("<@!457062141078536194>");
     }
 
