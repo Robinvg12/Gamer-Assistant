@@ -284,7 +284,10 @@ client.on('message', message => {
             else {
                 var temp_letter = vowel[Math.floor(Math.random() * vowel.length)]
             }
-            newword = newword + [temp_letter]
+            if (i == 0) {
+                temp_letter = temp_letter.toUpperCase();
+            }
+            newword = newword + [temp_letter];
         }
         message.channel.send(newword.toString());
     }
