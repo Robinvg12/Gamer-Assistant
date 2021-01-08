@@ -21,9 +21,9 @@ const yesno_list = ["Yes",        "No",               "Maybe...",
 
 const is_list = ["is", "was", "am", "are", "were", "did", "does", "has", "have", "had"]
 
-const vowel = ["a", "e", "i", "o", "u", "aa", "ee", "oo", "uu", "ou", "ea", "eu"]
+const vowel = ["a", "e", "i", "o", "u"]
 
-const cons = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "v", "w", "z", "ch", "bb", "dd", "ff", "gg", "hh", "ck", "ll", "nn", "pp", "ss", "tt", "nk", "sm", "tr", "br", "sl", "pl", "pr", "bl", "br", "rl"]
+const cons = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "v", "w", "z", "ch", "ck", "nk", "sm", "tr", "br", "sl", "pl", "pr", "bl", "br", "rl"]
 
 const sort = ["cvcvc", "cvcvc", "cvcv", "cvccvc", "cvvc", "cvvcvc", "cvc", "cv", "cvv", "cvvcvc", "cvccv", "cvc", "cvvccvcvc", "cvcvcvcvc", "cvvcvvc", "cvcvv", "cvy", "cvvy", "cvvcy", "cvcvy", "cvcvvcy", "cvcvcvcy", "cvcvcvc"]
 
