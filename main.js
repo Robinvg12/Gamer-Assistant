@@ -45,10 +45,10 @@ client.on('message', message => {
     var str = message.content;
     var res = str.toLowerCase().replace(/[^A-Za-z0-9\s<>@:]/g, '');
 
-    console.log(str);
+    //console.log(str);
 
     if (res.split(/ +/)[0] == "mels") {
-        message.channel.send("");
+        message.channel.send("<@!457062141078536194>");
     }
 
     if (!res.startsWith(prefix) || message.author.bot) return;
