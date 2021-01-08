@@ -148,10 +148,10 @@ client.on('message', message => {
         var last = fruits[fruits.length - 1].replace(/[^0-9@]/g, '');
         
         if (number) {
-            if (last.charAt(0) == "@") {
+            if (last.charAt(0) == ">") {
                 last = last.substring(1);
                 var high_last = true;
-            } else if (last.includes("@")) {
+            } else if (last.includes(">")) {
                 message.channel.send("Number is invalid");
                 return;
             } else {
@@ -190,7 +190,7 @@ client.on('message', message => {
 
         else {
             for (var i = 0; i < spam_len; i++) {
-                message.channel.send(fruits.join(" ")).then(msg => msg.delete({ timeout: 20000}));;
+                message.channel.send(fruits.join(" ")).then(msg => msg.delete({ timeout: 10000}));;
             }
         }
 
