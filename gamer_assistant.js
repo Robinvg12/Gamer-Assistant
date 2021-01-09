@@ -139,6 +139,8 @@ client.on('message', message => {
 
             message.channel.send(fruits.join(" "));
         }
+    }
+    
     else if (args[0] == "console") {
         var fruits = args2;
         fruits.shift();
