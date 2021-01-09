@@ -43,7 +43,7 @@ const helpEmbed = new Discord.MessageEmbed()
     .addFields(
         { name: 'Help', value: "``Hey Gamer, help`` = List of all the commands.\nor\n``Hey Gamer, help 'command'`` = View command." },
         { name: 'Ping', value: "``Hey Gamer, ... ping ...`` = Pong." }, 
-        { name: 'Spam', value: "``Hey Gamer, spam 'Word / Sentence' 'amount(*optional)'`` = Spams that word or sentence." },
+        { name: 'Spam', value: "``Hey Gamer, spam 'Word/Sentence' 'amount(*optional)'`` = Spams that word or sentence." },
         { name: 'Say', value: "``Hey Gamer, say 'Word/Sentence'`` = Says that word or sentence." },
         { name: 'Broadcast', value: "``Hey Gamer, broadcast 'Word/Sentence'`` = Says that word or sentence and deletes your message." },
         { name: 'Name', value: "``Hey Gamer, ... name ...`` = Says that word or sentence and deletes your message." },
