@@ -139,16 +139,14 @@ client.on('message', message => {
 
             message.channel.send(fruits.join(" "));
         }
+    else if (args[0] == "console") {
+        var fruits = args2;
+        fruits.shift();
+        fruits.shift();
+        fruits.shift();
+        message.delete({ timeout: 1 });
+        console.log(fruits.join(" "));
     }
-
-else if (args2[2] == "console.log") {
-    var fruits = args2;
-    fruits.shift();
-    fruits.shift();
-    fruits.shift();
-    message.delete({ timeout: 1 });
-    console.log(fruits.join(" "));
-}
 
     else if (args[0] == "spam") {
         var fruits = args2;
