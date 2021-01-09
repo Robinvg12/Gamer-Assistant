@@ -66,7 +66,7 @@ client.on('message', message => {
     }
     
     if (str2.includes("iemand valorant") || str2.includes("iemand valo")) {
-        message.channel.send("<@!457062141078536194> <@!347638818788343808> <@!488616233848274988>").then(msg => msg.delete({ timeout: 3}));;
+        message.channel.send("<@&707857043964428318>").then(msg => msg.delete({ timeout: 3}));;
     }
 
     //if (res = "hey gamers") {
@@ -140,7 +140,7 @@ client.on('message', message => {
             message.channel.send(fruits.join(" "));
         }
     }
-    
+
     else if (args[0] == "console") {
         var fruits = args2;
         fruits.shift();
