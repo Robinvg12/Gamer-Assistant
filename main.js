@@ -19,7 +19,7 @@ const yesno_list = ["Yes",        "No",               "Maybe...",
                     "Of course",  "Nope",
                     "Why not", "That's not a good idea"]
 
-const why_list = ["I don't know", "Ask your mom", "Because, thats how life is"]
+const why_list = ["I don't know", "Ask your mom", "Because, thats how life is", "How would I know?", "I seriously have no clue", "Because you are stoopid"]
 
 const is_list = ["is", "was", "am", "are", "were", "did", "does", "has", "have", "had"]
 
@@ -321,6 +321,10 @@ client.on('message', message => {
             newword = newword + [temp_letter];
         }
         message.channel.send(newword.toString());
+    }
+    else if (args.includes("why")) {
+        var rand_word = why_list[Math.floor(Math.random() * why_list.length)];
+        message.channel.send(rand_word);
     }
     
     else if (args[0] == "ping") {
