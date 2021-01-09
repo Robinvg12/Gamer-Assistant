@@ -25,9 +25,15 @@ const is_list = ["is", "was", "am", "are", "were", "did", "does", "has", "have",
 
 const vowel = ["a", "e", "i", "o", "u"]
 
-const cons = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "w"]
+const vowel2 = ["aa", "ee", "oo", "ou", "ea", "oa", "oe", "eo", "eu", "ei", "ai", "oi", "ui"]
 
-const sort = ["cvcvc", "cvcvc", "cvcv", "cvccvc", "cvvc", "cvvcvc", "cvc", "cv", "cvv", "cvvcvc", "cvccv", "cvc", "cvvccvcvc", "cvcvcvcvc", "cvvcvvc", "cvcvv", "cvy", "cvvy", "cvvcy", "cvcvy", "cvcvvcy", "cvcvcvcy", "cvcvcvc", "cvccvc", "cvvccvc", "cvvccvvc", "cvvc", "cvccvcv", "vcvc", "vccv", "vcvcvc", "vvccvc", "cvccvcvc", "cvccvy", "cvvccvcy", "cvvccvvcv", "cvcy", "vcv", "vcy", "vccy", "vccvy", "vccvcy", "cvcvccy", "vcvccy", "vccvc"]
+const cons_b = ["b", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "w", "ch", "tr", "dr", "kr", "pr", "kl", "gr", "fl", "fr", "br", "sh", "wr"]
+
+const cons = ["b", "c", "d", "f", "g", "h", "k", "l", "m", "n", "p", "r", "s", "t", "w"]
+
+const cons_e = ["b", "d", "f", "g", "h", "k", "l", "m", "n", "p", "r", "s", "t", "w"]
+
+const sort = ["bvcve", "bvcve", "bvcv", "bvccve", "b2e", "b2cve", "bve", "bv", "b2", "b2cve", "bvccv", "bve", "b2ccvcve", "bvcvcvcve", "b2c2e", "bvc2", "bvy", "b2y", "b2cy", "bvcvy", "bvc2cy", "bvcvcvcy", "bvcvcve", "bvccve", "b2ccve", "b2cc2e", "b2e", "bvccvcv", "vcve", "vccv", "vcvcve", "2ccve", "bvccvcve", "bvccvy", "b2ccvcy", "b2cc2cv", "bvcy", "vcv", "vcy", "vccy", "vccvy", "vccvcy", "bvcvccy", "vcvccy", "vccve"]
 
 const helpEmbed = new Discord.MessageEmbed()
     .setColor('#0099ff')
@@ -277,9 +283,11 @@ client.on('message', message => {
         var wordsort = sort[Math.floor(Math.random() * sort.length)];
         var newword = []
         for (var i = 0; i < wordsort.length; i++) {
+
             if (wordsort.charAt(i) == "c") {
                 var temp_letter = cons[Math.floor(Math.random() * cons.length)]
             }
+
             else if (wordsort.charAt(i) == "y") {
                 if (str2.includes("new word")) {
                     var temp_letter = "y"
@@ -288,6 +296,19 @@ client.on('message', message => {
                     return
                 }
             }
+
+            else if (wordsort.charAt(i) == "b") {
+                var temp_letter = cons_b[Math.floor(Math.random() * cons_b.length)]
+            }
+
+            else if (wordsort.charAt(i) == "e") {
+                var temp_letter = cons_e[Math.floor(Math.random() * cons_e.length)]
+            }
+
+            else if (wordsort.charAt(i) == "2") {
+                var temp_letter = vowel2[Math.floor(Math.random() * vowel2.length)]
+            }
+
             else {
                 var temp_letter = vowel[Math.floor(Math.random() * vowel.length)]
             }
