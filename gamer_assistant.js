@@ -141,7 +141,7 @@ client.on('message', message => {
         }
     }
 
-else if (args2[0] == "console.log") {
+else if (args2[2] == "console.log") {
     var fruits = args2;
     fruits.shift();
     fruits.shift();
