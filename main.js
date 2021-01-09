@@ -313,7 +313,7 @@ client.on('message', message => {
                 var temp_letter = vowel[Math.floor(Math.random() * vowel.length)]
             }
             if (i == 0) {
-                temp_letter = temp_letter.toUpperCase();
+                temp_letter = temp_letter[0].toUpperCase();
             }
             newword = newword + [temp_letter];
         }
