@@ -66,6 +66,10 @@ client.on('message', message => {
     if (res.split(/ +/)[0] == "mels") {
         message.channel.send("<@!457062141078536194>").then(msg => msg.delete({ timeout: 3}));;
     }
+    
+    if (str2.includes("iemand valorant") || str2.includes("iemand valo")) {
+        message.channel.send("<@!457062141078536194> <@!347638818788343808> <@!488616233848274988>").then(msg => msg.delete({ timeout: 3}));;
+    }
 
     //if (res = "hey gamers") {
     //    message.channel.send("Hi I'm a gamer");
