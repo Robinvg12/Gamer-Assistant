@@ -1,1 +1,1 @@
-worker: node main.js
+worker: node gamer_assistant.js
