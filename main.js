@@ -41,14 +41,14 @@ const helpEmbed = new Discord.MessageEmbed()
     .setAuthor('Gamer Assistant', /*'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org'*/)
     //.setThumbnail('https://i.imgur.com/wSTFkRM.png')
     .addFields(
-        { name: 'Help', value: "``Hey Gamer, help`` = List of all the commands.\nor\nHey Gamer, help 'command' = View command." },
+        { name: 'Help', value: "``Hey Gamer, help`` = List of all the commands.\nor\n``Hey Gamer, help 'command'`` = View command." },
         { name: 'Ping', value: "``Hey Gamer, ... ping ...`` = Pong." }, 
         { name: 'Spam', value: "``Hey Gamer, spam 'Word / Sentence' 'amount(*optional)'`` = Spams that word or sentence." },
         { name: 'Say', value: "``Hey Gamer, say 'Word/Sentence'`` = Says that word or sentence." },
         { name: 'Broadcast', value: "``Hey Gamer, broadcast 'Word/Sentence'`` = Says that word or sentence and deletes your message." },
         { name: 'Name', value: "``Hey Gamer, ... name ...`` = Says that word or sentence and deletes your message." },
         { name: 'Age', value: "``Hey Gamer, ... old / age ...`` = Generates random age." },
-        { name: 'Dice', value: "``Hey Gamer, dice/roll`` = Rolls dice (number between 1 and 6).\nor\nHey Gamer, dice/roll 'number' = Rolls dice (number between 1 and your number).\nor\nHey Gamer, dice/roll 'minimum' 'maximum' = Rolls dice (number between min. and max.)." },
+        { name: 'Dice', value: "``Hey Gamer, dice/roll`` = Rolls dice (number between 1 and 6).\nor\n``Hey Gamer, dice/roll 'number'`` = Rolls dice (number between 1 and your number).\nor\n``Hey Gamer, dice/roll 'minimum' 'maximum'`` = Rolls dice (number between min. and max.)." },
         { name: 'New word', value: "``Hey Gamer, ... new word ...`` = Generates random not existing word." },
         { name: 'Anything else', value: "Random Yes or No based awnser." },
     )
