@@ -279,9 +279,11 @@ client.on('message', message => {
             
         }, 1000);
     }
-    else if (str2.includes("new word") || str2.includes("nieuw woord")) {
+    else if (str2.includes("new word") || str2.includes("nieuw woord") || str2.includes("nieuwe woord")) {
+
         var wordsort = sort[Math.floor(Math.random() * sort.length)];
         var newword = []
+
         for (var i = 0; i < wordsort.length; i++) {
 
             if (wordsort.charAt(i) == "c") {
