@@ -335,7 +335,7 @@ client.on('message', message => {
     }
     else if (args[0] == ("snake") || args[1] == ("snake")) {
 
-        message.channel.send('g!(&(^*!&@#$^*!$#$&*snake').then(msg => msg.delete({ timeout: 300}));
+        message.channel.send('g!(&(^*!&@#$^*!$#$&*snake').then(msg => msg.delete({ timeout: 1}));
     }
 
     else if (args.includes("why")) {
