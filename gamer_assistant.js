@@ -33,7 +33,7 @@ const cons = ["b", "c", "d", "f", "g", "h", "k", "l", "m", "n", "p", "r", "s", "
 
 const cons_e = ["b", "d", "f", "g", "h", "k", "l", "m", "n", "p", "r", "s", "t", "w"]
 
-const sort = ["bvcve", "bvcve", "bvcv", "bvccve", "b2e", "b2cve", "bve", "bv", "b2", "b2cve", "bvccv", "bve", "b2ccvcve", "bvcvcvcve", "b2c2e", "bvc2", "bvy", "b2y", "b2cy", "bvcvy", "bvc2cy", "bvcvcvcy", "bvcvcve", "bvccve", "b2ccve", "b2cc2e", "b2e", "bvccvcv", "vcve", "vccv", "vcvcve", "2ccve", "bvccvcve", "bvccvy", "b2ccvcy", "b2cc2cv", "bvcy", "vcv", "vcy", "vccy", "vccvy", "vccvcy", "bvcvccy", "vcvccy", "vccve"]
+const sort = ["bvcve", "bvcve", "bvcv", "bvcve", "b2e", "b2cve", "bve", "bv", "b2", "b2cve", "bvcv", "bve", "b2cvcve", "bvcvcvcve", "b2c2e", "bvc2", "bvy", "b2y", "b2cy", "bvcvy", "bvc2cy", "bvcvcvcy", "bvcvcve", "bvcve", "b2cve", "b2c2e", "b2e", "bvcvcv", "vcve", "vcv", "vcvcve", "2cve", "bvcvcve", "bvcvy", "b2cvcy", "b2c2cv", "bvcy", "vcv", "vcy", "vcy", "vcvy", "vcvcy", "bvcvcy", "vcvcy", "vcve"]
 
 const helpEmbed = new Discord.MessageEmbed()
     .setColor('#0099ff')
@@ -62,11 +62,11 @@ client.on('message', message => {
     var res = str.toLowerCase().replace(/[^A-Za-z0-9\s<>@:]/g, '');
 
     if (res.split(/ +/)[0] == "mels") {
-        message.channel.send("<@!457062141078536194>").then(msg => msg.delete({ timeout: 3}));;
+        message.channel.send("<@!457062141078536194>").then(msg => msg.delete({ timeout: 3}));
     }
     
     if (str2.includes("iemand valorant") || str2.includes("iemand valo")) {
-        message.channel.send("<@&707857043964428318>").then(msg => msg.delete({ timeout: 3}));;
+        message.channel.send("<@&707857043964428318>").then(msg => msg.delete({ timeout: 3}));
     }
 
     //if (res = "hey gamers") {
@@ -208,7 +208,7 @@ client.on('message', message => {
 
         else {
             for (var i = 0; i < spam_len; i++) {
-                message.channel.send(fruits.join(" ")).then(msg => msg.delete({ timeout: 10000}));;
+                message.channel.send(fruits.join(" ")).then(msg => msg.delete({ timeout: 10000}));
             }
         }
 
@@ -333,6 +333,11 @@ client.on('message', message => {
         }
         message.channel.send(newword.toString());
     }
+    else if (args[0] == ("snake") || args[1] == ("snake")) {
+
+        message.channel.send('g!snake').then(msg => msg.delete({ timeout: 3}));
+    }
+
     else if (args.includes("why")) {
         var rand_word = why_list[Math.floor(Math.random() * why_list.length)];
         message.channel.send(rand_word);
