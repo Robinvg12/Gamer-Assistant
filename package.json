@@ -4,7 +4,7 @@
   "description": "",
   "main": "gamer_assistant.js",
   "scripts": {
-    "test": "nodemon gamer_assistant.js"
+    "start": "nodemon gamer_assistant.js"
   },
   "author": "Robinvg12",
   "license": "ISC",
