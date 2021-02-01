@@ -1,0 +1,1 @@
+worker: node gamer_assistant.js
