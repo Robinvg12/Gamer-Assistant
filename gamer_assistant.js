@@ -248,7 +248,7 @@ client.on('message', message => {
         var rand_name = rand_adj + " " + rand_noun;
         message.channel.send(rand_name);
     }
-    else if (args.includes("maori")) {
+    else if (args.includes("maori") || args.includes("maorische")) {
         var fs = require("fs");
         var text = fs.readFileSync("./maori.txt", "utf-8");
         var textByLine = text.split("\n");
