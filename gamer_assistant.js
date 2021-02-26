@@ -248,6 +248,14 @@ client.on('message', message => {
         var rand_name = rand_adj + " " + rand_noun;
         message.channel.send(rand_name);
     }
+    else if (args.includes("maori") && args.includes("filosofie")) {
+        var fs = require("fs");
+        var text = fs.readFileSync("./maori.txt", "utf-8");
+        var textByLine = text.split("\n");
+        var rand_zin = textByLine[Math.floor(Math.random() * textByLine.length)];
+
+        rand_zin = rand_zin.charAt(0).toUpperCase() + rand_zin.slice(1);
+    }
     else if (args.includes("age") || args.includes("old") || args.includes("oud")) {
         var random1 = Math.random() * 6;
         if (random1 == 1) {
