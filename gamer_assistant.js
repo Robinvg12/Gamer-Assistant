@@ -391,9 +391,9 @@ client.on('message', message => {
                 //console.log(newword)
             }
             //console.log(newsen)
-            newsen = newsen + [newword.toString() + " "];
+            newsen = newsen + [newword.toString()];
         }
-        message.channel.send(newsen.toString() + ".");
+        message.channel.send(newsen.join(" ") + ".");
     }
 
 
