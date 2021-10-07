@@ -384,8 +384,9 @@ client.on('message', message => {
                         temp_letter = temp_letter[0].toUpperCase();
                     }
                     newword = newword + [temp_letter];
+                    console.log(temp_letter)
+                    console.log(newword)
                 }
-                
                 newsen = newsen + [newword.toString()];
         }
         message.channel.send(newsen.toString());
