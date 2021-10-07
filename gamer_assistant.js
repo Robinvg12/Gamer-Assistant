@@ -391,9 +391,14 @@ client.on('message', message => {
                 //console.log(newword)
             }
             //console.log(newsen)
-            newsen = newsen + [newword.toString()];
+            if s < senleng - 1{
+                newsen = newsen + [newword.toString() + " "];
+            }
+            else {
+                newsen = newsen + [newword.toString()];
+            }
         }
-        message.channel.send(newsen.join(" ") + ".");
+        message.channel.send(newsen.toString() + ".");
     }
 
 
