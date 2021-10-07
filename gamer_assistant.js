@@ -383,7 +383,7 @@ client.on('message', message => {
                 else {
                     var temp_letter = vowel[Math.floor(Math.random() * vowel.length)]
                 }
-                if (i == 0 || s == 0) {
+                if (i == 0 && s == 0) {
                     temp_letter = temp_letter[0].toUpperCase();
                 }
                 newword = newword + [temp_letter];
@@ -391,9 +391,9 @@ client.on('message', message => {
                 console.log(newword)
             }
             console.log(newsen)
-            newsen = newsen + [newword.toString()];
+            newsen = newsen + [newword.toString() + " "];
         }
-        message.channel.send(newsen.toString(" "));
+        message.channel.send(newsen.toString() + ".");
     }
 
 
