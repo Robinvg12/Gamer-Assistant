@@ -391,7 +391,7 @@ client.on('message', message => {
                 //console.log(newword)
             }
             //console.log(newsen)
-            if s < senleng - 1{
+            if (s < senleng - 1) {
                 newsen = newsen + [newword.toString() + " "];
             }
             else {
