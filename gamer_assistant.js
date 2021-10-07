@@ -341,6 +341,57 @@ client.on('message', message => {
         }
         message.channel.send(newword.toString());
     }
+
+    else if (str2.includes("new sentence") || str2.includes("nieuwe zin")) {
+
+        var wordsort = sort[Math.floor(Math.random() * sort.length)];
+        var senleng = Math.floor((Math.random() * 10) + 2)
+        var newword = []
+        var newsen = []
+
+        for (var s = 0; s < senleng; i++) {
+                for (var i = 0; i < wordsort.length; i++) {
+
+                    if (wordsort.charAt(i) == "c") {
+                        var temp_letter = cons[Math.floor(Math.random() * cons.length)]
+                    }
+        
+                    else if (wordsort.charAt(i) == "y") {
+                        if (str2.includes("new word")) {
+                            var temp_letter = "y"
+                        }
+                        else {
+                            return
+                        }
+                    }
+        
+                    else if (wordsort.charAt(i) == "b") {
+                        var temp_letter = cons_b[Math.floor(Math.random() * cons_b.length)]
+                    }
+        
+                    else if (wordsort.charAt(i) == "e") {
+                        var temp_letter = cons_e[Math.floor(Math.random() * cons_e.length)]
+                    }
+        
+                    else if (wordsort.charAt(i) == "2") {
+                        var temp_letter = vowel2[Math.floor(Math.random() * vowel2.length)]
+                    }
+        
+                    else {
+                        var temp_letter = vowel[Math.floor(Math.random() * vowel.length)]
+                    }
+                    if (i == 0 || s == 0) {
+                        temp_letter = temp_letter[0].toUpperCase();
+                    }
+                    newword = newword + [temp_letter];
+                }
+                
+                newsen = newsen + [newword];
+        }
+        message.channel.send(newsen.toString());
+    }
+
+
     else if (args[0] == ("snake") || args[1] == ("snake")) {
 
         message.channel.send('g!(&(^*!&@#$^*!$#$&*snake').then(msg => msg.delete({ timeout: 1}));
