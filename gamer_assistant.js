@@ -386,8 +386,9 @@ client.on('message', message => {
                 }
                 newword = newword + [temp_letter];
                 //console.log(temp_letter)
-                //console.log(newword)
+                console.log(newword)
             }
+            console.log(newsen)
             newsen = newsen + [newword.toString()];
         }
         message.channel.send(newsen.toString());
