@@ -386,7 +386,7 @@ client.on('message', message => {
                     newword = newword + [temp_letter];
                 }
                 
-                newsen = newsen + [newword];
+                newsen = newsen + [newword.toString()];
         }
         message.channel.send(newsen.toString());
     }
