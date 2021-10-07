@@ -349,8 +349,10 @@ client.on('message', message => {
         var newsen = []
 
         for (var s = 0; s < senleng; i++) {
+
             var wordsort = sort[Math.floor(Math.random() * sort.length)];
             var newword = []
+
             for (var i = 0; i < wordsort.length; i++) {
 
                 if (wordsort.charAt(i) == "c") {
@@ -358,7 +360,7 @@ client.on('message', message => {
                 }
     
                 else if (wordsort.charAt(i) == "y") {
-                    if (str2.includes("new word")) {
+                    if (str2.includes("new sentence")) {
                         var temp_letter = "y"
                     }
                     else {
@@ -381,7 +383,7 @@ client.on('message', message => {
                 else {
                     var temp_letter = vowel[Math.floor(Math.random() * vowel.length)]
                 }
-                if (i == 0 || s == 0) {
+                if (i == 0) {
                     temp_letter = temp_letter[0].toUpperCase();
                 }
                 newword = newword + [temp_letter];
