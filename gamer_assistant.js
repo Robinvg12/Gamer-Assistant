@@ -63,6 +63,8 @@ client.on('message', message => {
     var str2 = message.content.toLowerCase();
     var res = str.toLowerCase().replace(/[^A-Za-z0-9\s<>@:]/g, '');
 
+    if (message.author.bot) return
+
     if (res.split(/ +/)[0] == "mels") {
         message.channel.send("<@!457062141078536194>").then(msg => msg.delete({ timeout: 3}));
     }
@@ -81,7 +83,7 @@ client.on('message', message => {
     //if (res = "hey gamers") {
     //    message.channel.send("Hi I'm a gamer");
     //}
-    if (!res.startsWith(prefix) || message.author.bot) return;
+    if (!res.startsWith(prefix)) return;
 
     //message.channel.send('mc: ' + message.content);
     //message.channel.send('res: ' + res);
