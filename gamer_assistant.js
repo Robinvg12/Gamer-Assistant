@@ -73,18 +73,18 @@ client.on('message', message => {
         message.channel.send("<@&707857043964428318>").then(msg => msg.delete({ timeout: 3}));
     }
 
-    // console.log(str)
-    // var words = str.split(/ +/);
-    // console.log(words)
-    // var weeb_found = false
-    // for (i = 0; i < words.length; i++) {
-    //     if (words[i] in weeb_list) {
-    //         weeb_found = true
-    //     }
-    // }
-    // if (weeb_found){
-    //     message.channel.send(`Wow, ${message.author} is a weeb :O!`);
-    // }
+    console.log(str)
+    var words = str.split(/ +/);
+    console.log(words)
+    var weeb_found = false
+    for (i = 0; i < words.length; i++) {
+        if (weeb_list.includes(words[i])) {
+            weeb_found = true
+        }
+    }
+    if (weeb_found){
+        message.channel.send(`Wow, ${message.author} is a weeb :O!`);
+    }
 
     //if (res = "hey gamers") {
     //    message.channel.send("Hi I'm a gamer");
