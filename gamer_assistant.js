@@ -189,10 +189,9 @@ client.on('message', message => {
             var high_last = false;
         }
         
-
+        fruits_join = fruits.join();
         if (high_last && last < 31 && last > 10) {
             var spam_len = last;
-            fruits_join = fruits.join();
             if (fruits_join.includes("<@")) {
                 message.channel.send("You cant spam a mention more than 10 times");
                 return;
