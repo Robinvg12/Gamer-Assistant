@@ -73,7 +73,7 @@ client.on('message', message => {
         message.channel.send("<@&707857043964428318>").then(msg => msg.delete({ timeout: 3}));
     }
 
-    var words = res.split(/ +/);
+    var words = str.split(/ +/);
     var weeb_found = false
     for (i=0; i < words.length; i++) {
         if (words[i] in weeb_list) {
