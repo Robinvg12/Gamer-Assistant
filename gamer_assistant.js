@@ -35,6 +35,8 @@ const cons_e = ["b", "d", "f", "g", "h", "k", "l", "m", "n", "p", "r", "s", "t",
 
 const sort = ["bvcve", "bvcve", "bvcv", "bvcve", "b2e", "b2cve", "bve", "bv", "b2", "b2cve", "bvcv", "bve", "b2cvcve", "bvcvcvcve", "b2c2e", "bvc2", "bvy", "b2y", "b2cy", "bvcvy", "bvc2cy", "bvcvcvcy", "bvcvcve", "bvcve", "b2cve", "b2c2e", "b2e", "bvcvcv", "vcve", "vcv", "vcvcve", "2cve", "bvcvcve", "bvcvy", "b2cvcy", "b2c2cv", "bvcy", "vcv", "vcy", "vcy", "vcvy", "vcvcy", "bvcvcy", "vcvcy", "vcve"]
 
+const weeb_list = [":UmaruCri:", ":Crying:", ":veiMadge:", ":AngerShake:", ":RageExtreme:", ":veiHACKERMANS:", ":UmaruCrybaby:", ":suffering:", ":SleepTime:", ":pocky_ef_sigh:", ":PadoruPadoru:", ":Yeptune:", ":CB_zzz:", ":EveryonePolite:", ":shrug:", ":XDlol:", ":KannaPingNom:", ":CB_ping_rage:", ""]
+
 const helpEmbed = new Discord.MessageEmbed()
     .setColor('#0099ff')
     .setTitle('Commands')
@@ -83,6 +85,8 @@ client.on('message', message => {
     args.shift();
     //message.channel.send('args: ' + args);
     //message.channel.send('args[0]: ' + args[0]);
+    
+    const weeb_found = args.some(r=> weeb_list.includes(r))
 
     const no_args = res.split(/ +/);
     //message.channel.send('test ofzo idk: ' + no_args);
@@ -411,7 +415,10 @@ client.on('message', message => {
         var rand_word = why_list[Math.floor(Math.random() * why_list.length)];
         message.channel.send(rand_word);
     }
-    
+    else if (weeb_found){
+        message.channel.send(`Wow, ${message.author} is a weeb :O!`);
+    }
+
     else if (args[0] == "ping") {
         message.channel.send("Pong!");
     }
