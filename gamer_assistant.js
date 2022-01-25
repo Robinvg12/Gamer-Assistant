@@ -35,9 +35,9 @@ const cons_e = ["b", "d", "f", "g", "h", "k", "l", "m", "n", "p", "r", "s", "t",
 
 const sort = ["bvcve", "bvcve", "bvcv", "bvcve", "b2e", "b2cve", "bve", "bv", "b2", "b2cve", "bvcv", "bve", "b2cvcve", "bvcvcvcve", "b2c2e", "bvc2", "bvy", "b2y", "b2cy", "bvcvy", "bvc2cy", "bvcvcvcy", "bvcvcve", "bvcve", "b2cve", "b2c2e", "b2e", "bvcvcv", "vcve", "vcv", "vcvcve", "2cve", "bvcvcve", "bvcvy", "b2cvcy", "b2c2cv", "bvcy", "vcv", "vcy", "vcy", "vcvy", "vcvcy", "bvcvcy", "vcvcy", "vcve"]
 
-const weeb_list = [":UmaruCri:", ":Crying:", ":veiMadge:", ":AngerShake:", ":RageExtreme:", ":veiHACKERMANS:", ":UmaruCrybaby:", ":suffering:", ":SleepTime:", ":pocky_ef_sigh:", ":PadoruPadoru:", ":Yeptune:", ":CB_zzz:", ":EveryonePolite:", ":shrug:", ":XDlol:", ":KannaPingNom:", ":CB_ping_rage:"]
+const weeb_list = [":ask:", ":UmaruCri:", ":Crying:", ":veiMadge:", ":AngerShake:", ":RageExtreme:", ":veiHACKERMANS:", ":UmaruCrybaby:", ":suffering:", ":SleepTime:", ":pocky_ef_sigh:", ":PadoruPadoru:", ":Yeptune:", ":CB_zzz:", ":EveryonePolite:", ":shrug:", ":XDlol:", ":KannaPingNom:", ":CB_ping_rage:"]
 
-const nsfw_list = ["pls nsfw", "pls booty", "pls porn", "porn", "sus", "sussy"]
+const nsfw_list = ["nsfw", "booty", "porn", "sus", "sussy"]
 
 const helpEmbed = new Discord.MessageEmbed()
     .setColor('#0099ff')
