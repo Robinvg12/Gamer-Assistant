@@ -75,7 +75,7 @@ client.on('message', message => {
 
     var words = res.split(/ +/);
     var weeb_found = false
-    for (i=0; i < words.length(); i++) {
+    for (i=0; i < words.length; i++) {
         if (words[i] in weeb_list) {
             weeb_found = true
         }
