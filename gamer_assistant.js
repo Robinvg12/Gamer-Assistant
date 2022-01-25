@@ -37,7 +37,9 @@ const sort = ["bvcve", "bvcve", "bvcv", "bvcve", "b2e", "b2cve", "bve", "bv", "b
 
 const weeb_list = [":ask:", ":UmaruCri:", ":Crying:", ":veiMadge:", ":AngerShake:", ":RageExtreme:", ":veiHACKERMANS:", ":UmaruCrybaby:", ":suffering:", ":SleepTime:", ":pocky_ef_sigh:", ":PadoruPadoru:", ":Yeptune:", ":CB_zzz:", ":EveryonePolite:", ":shrug:", ":XDlol:", ":KannaPingNom:", ":CB_ping_rage:"]
 
-const nsfw_list = ["nsfw", "booty", "porn", "sus", "sussy"]
+const nsfw_list = ["nsfw", "booty", "porn"]
+
+const sus_list = ["sus", "sussy"]
 
 const helpEmbed = new Discord.MessageEmbed()
     .setColor('#0099ff')
@@ -97,6 +99,16 @@ client.on('message', message => {
     // console.log(weeb_found)
     if (nsfw_found){
         message.channel.send(`https://tenor.com/view/impostersus-the-impostor-is-sus-fuck-you-meio-sus-among-us-gif-20598684`);
+    }
+    var sus_found = false
+    for (i = 0; i < words.length; i++) {
+        if (sus_list.includes(words[i])) {
+            sus_found = true
+        }
+    }
+    // console.log(weeb_found)
+    if (sus_found){
+        message.channel.send(`:sussybaka~1:`);
     }
 
     //if (res = "hey gamers") {
