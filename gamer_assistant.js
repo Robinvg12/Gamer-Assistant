@@ -74,7 +74,7 @@ client.on('message', message => {
     }
 
     // console.log(str)
-    var words = res.split(/ +/);
+    var words = str.split(/ +/);
     console.log(words)
     var weeb_found = false
     for (i = 0; i < words.length; i++) {
