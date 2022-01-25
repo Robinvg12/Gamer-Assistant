@@ -87,6 +87,7 @@ client.on('message', message => {
     //message.channel.send('args[0]: ' + args[0]);
     
     const weeb_found = args.some(r=> weeb_list.includes(r))
+    console.log(weeb_found);
 
     const no_args = res.split(/ +/);
     //message.channel.send('test ofzo idk: ' + no_args);
