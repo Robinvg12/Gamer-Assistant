@@ -37,6 +37,8 @@ const sort = ["bvcve", "bvcve", "bvcv", "bvcve", "b2e", "b2cve", "bve", "bv", "b
 
 const weeb_list = [":UmaruCri:", ":Crying:", ":veiMadge:", ":AngerShake:", ":RageExtreme:", ":veiHACKERMANS:", ":UmaruCrybaby:", ":suffering:", ":SleepTime:", ":pocky_ef_sigh:", ":PadoruPadoru:", ":Yeptune:", ":CB_zzz:", ":EveryonePolite:", ":shrug:", ":XDlol:", ":KannaPingNom:", ":CB_ping_rage:"]
 
+const nsfw_list = ["pls nsfw", "pls booty", "pls porn", "porn", "sus", "sussy"]
+
 const helpEmbed = new Discord.MessageEmbed()
     .setColor('#0099ff')
     .setTitle('Commands')
@@ -75,16 +77,26 @@ client.on('message', message => {
 
     // console.log(str)
     var words = str.split(/ +/);
-    console.log(words)
+    // console.log(words)
     var weeb_found = false
     for (i = 0; i < words.length; i++) {
         if (weeb_list.includes(words[i])) {
             weeb_found = true
         }
     }
-    console.log(weeb_found)
+    // console.log(weeb_found)
     if (weeb_found){
         message.channel.send(`Wow, ${message.author} is a weeb :O!`);
+    }
+    var nsfw_found = false
+    for (i = 0; i < words.length; i++) {
+        if (nsfw_list.includes(words[i])) {
+            nsfw_found = true
+        }
+    }
+    // console.log(weeb_found)
+    if (nsfw_found){
+        message.channel.send(`https://tenor.com/view/impostersus-the-impostor-is-sus-fuck-you-meio-sus-among-us-gif-20598684`);
     }
 
     //if (res = "hey gamers") {
