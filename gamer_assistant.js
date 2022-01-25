@@ -70,8 +70,10 @@ client.on('message', message => {
     if (str2.includes("iemand valorant") || str2.includes("iemand valo")) {
         message.channel.send("<@&707857043964428318>").then(msg => msg.delete({ timeout: 3}));
     }
+
+    var words = res.split(/ +/);
     
-    const weeb_found = args.some(r=> weeb_list.includes(r))
+    const weeb_found = words.some(r=> weeb_list.includes(r))
     if (weeb_found){
         message.channel.send(`Wow, ${message.author} is a weeb :O!`);
     }
