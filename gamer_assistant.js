@@ -204,7 +204,7 @@ client.on('message', message => {
         } else if (last > 10 && !high_last) {
             message.channel.send("Max spam is 10");
             return;
-        } else if (fruits_join.includes("<@") && last > 5 && !high_last)
+        } else if (fruits_join.includes("<@") && last > 5 && !high_last) {
             message.channel.send("Max spam with a mention is 5");
         } else if (last > 0) {
             var spam_len = last;
