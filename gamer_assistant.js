@@ -70,6 +70,11 @@ client.on('message', message => {
     if (str2.includes("iemand valorant") || str2.includes("iemand valo")) {
         message.channel.send("<@&707857043964428318>").then(msg => msg.delete({ timeout: 3}));
     }
+    
+    const weeb_found = args.some(r=> weeb_list.includes(r))
+    if (weeb_found){
+        message.channel.send(`Wow, ${message.author} is a weeb :O!`);
+    }
 
     //if (res = "hey gamers") {
     //    message.channel.send("Hi I'm a gamer");
@@ -85,9 +90,6 @@ client.on('message', message => {
     args.shift();
     //message.channel.send('args: ' + args);
     //message.channel.send('args[0]: ' + args[0]);
-    
-    const weeb_found = args.some(r=> weeb_list.includes(r))
-    console.log(weeb_found);
 
     const no_args = res.split(/ +/);
     //message.channel.send('test ofzo idk: ' + no_args);
@@ -415,9 +417,6 @@ client.on('message', message => {
     else if (args.includes("why")) {
         var rand_word = why_list[Math.floor(Math.random() * why_list.length)];
         message.channel.send(rand_word);
-    }
-    else if (weeb_found){
-        message.channel.send(`Wow, ${message.author} is a weeb :O!`);
     }
 
     else if (args[0] == "ping") {
