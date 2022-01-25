@@ -75,13 +75,14 @@ client.on('message', message => {
 
     // console.log(str)
     var words = res.split(/ +/);
-    // console.log(words)
+    console.log(words)
     var weeb_found = false
     for (i = 0; i < words.length; i++) {
         if (weeb_list.includes(words[i])) {
             weeb_found = true
         }
     }
+    console.log(weeb_found)
     if (weeb_found){
         message.channel.send(`Wow, ${message.author} is a weeb :O!`);
     }
