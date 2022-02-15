@@ -108,7 +108,7 @@ client.on('message', message => {
     }
     // console.log(weeb_found)
     if (sus_found){
-        message.channel.send(`:sussybaka~1:`);
+        message.channel.send(`<a:sussybaka:897229921615765506>`);
     }
 
     //if (res = "hey gamers") {
