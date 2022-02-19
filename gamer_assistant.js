@@ -111,10 +111,10 @@ client.on('message', message => {
         message.channel.send(`<a:sussybaka:897229921615765506>`);
     }
 
-    if (res.contains("toasty")) {
+    if (res.includes("toasty")) {
         message.delete({ timeout: 1 });
         for (i = 0; i < words.length; i++) {
-            if (words[i].contains('toasty'))
+            if (words[i].includes('toasty'))
                 words.splice(index, i)
         }
         message.send(`${message.author} sent:\n${words}`)
