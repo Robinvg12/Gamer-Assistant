@@ -117,7 +117,9 @@ client.on('message', message => {
             if (words[i].includes('toasty'))
                 words.splice(index, i)
         }
-        message.send(`${message.author} sent:\n${words}`)
+        if (words.length > 0) {
+            message.send(`${message.author} sent:\n${words.join(" ")}`)
+        }
     }
 
     //if (res = "hey gamers") {
