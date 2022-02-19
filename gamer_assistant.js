@@ -118,7 +118,7 @@ client.on('message', message => {
                 words.splice(i, 1)
         }
         if (words.length > 0) {
-            message.send(`${message.author} sent:\n${words.join(" ")}`)
+            message.channel.send(`${message.author} sent:\n${words.join(" ")}`)
         }
     }
 
