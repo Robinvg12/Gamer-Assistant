@@ -115,7 +115,7 @@ client.on('message', message => {
         message.delete({ timeout: 1 });
         for (i = 0; i < words.length; i++) {
             if (words[i].includes('toasty'))
-                words.splice(index, i)
+                words.splice(i, 1)
         }
         if (words.length > 0) {
             message.send(`${message.author} sent:\n${words.join(" ")}`)
