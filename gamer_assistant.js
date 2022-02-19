@@ -111,6 +111,15 @@ client.on('message', message => {
         message.channel.send(`<a:sussybaka:897229921615765506>`);
     }
 
+    if (res.contains("toasty")) {
+        message.delete({ timeout: 1 });
+        for (i = 0; i < words.length; i++) {
+            if (words[i].contains('toasty'))
+                words.splice(index, i)
+        }
+        message.send(`${message.author} sent:\n${words}`)
+    }
+
     //if (res = "hey gamers") {
     //    message.channel.send("Hi I'm a gamer");
     //}
@@ -128,6 +137,7 @@ client.on('message', message => {
 
     const no_args = res.split(/ +/);
     //message.channel.send('test ofzo idk: ' + no_args);
+
     if (no_args.length < 3) {
         message.channel.send(`Hello ${message.author}, how can I help you?`);
         setTimeout(() => { message.channel.send(`Type "Hey gamer (question)"`); }, 1000);
